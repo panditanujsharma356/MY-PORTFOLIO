@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anuj Sharma</title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins' ,sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    color: #ededed;
+    background: #031b29;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #051129;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color:red;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+
+    opacity: 0;
+    animation: slideright 3s infinite ease forwards;
+}
+.navbar a{
+display: inline-block;
+font-size: 25px;
+color: #fff;
+text-decoration: none;
+font-weight: 500;
+margin-left: 35px;
+transition: .3s;
+opacity: 0;
+animation: slidetop .5s ease forwards;
+animation-delay: calc(.2s * var(--1));
+}
+.navbar a:hover{
+    color: #0ef;
+
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    padding: 70px 10% 0;
+    background-image: url(background\ image.png);
+
+}
+.home-content{
+    max-width: 600px;
+
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slidebottom 1s ease forwards;
+    animation-delay: 7s;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+    animation: slidetop 1s ease forwards;
+    animation-delay: .7s;
+}
+.home-content h3 span{
+    color: #0ef;
+
+}
+
+.home-content h1{
+    font-size: 56px;
+font-weight: 700;
+margin: -3px 0;
+
+opacity: 0;
+animation: slideright 3s ease forwards;
+}
+.home-content p{
+    font-size: 20px;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-scl a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #0ef;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: calc(.2s * var(--1));
+}
+.home-scl a:hover{
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
+}
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef
+}
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan,0 0 50px cyan,
+    0 0 100px cyan,0 0 200px cyan
+
+}
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.srem;
+
+}
+.about-img img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+
+}
+.about-text h2{
+    font-size: 60px;
+}
+.about-text h2 span{
+    color: #0ef;
+}
+
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 150px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+#services{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+.sub-title{
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px;
+}
+.sub-title span{
+    color: #0ef;
+}
+
+.container{
+    padding:90px;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+.services-list div{
+    
+    background-color: transparent;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 13px;
+    border-right: 10px;
+    transition: backgrond 0.5s,transform 0.5s;
+box-shadow: 1px 1px 20px #012290f7,
+1px 1px 40px #0053b3f7
+}
+.services-list i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.read{
+    display: inline-block;
+    padding: 12px 20px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px #0ef,
+    0 0 25px #0ef;
+}
+.read:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan,0 0 50px cyan,
+    0 0 100px cyan,0 0 200px cyan
+
+}
+.services-list div:hover{
+    transform: translate(-10px);
+}
+
+/* skills css */
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container1{
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+.heading1{
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+
+@keyframes showtext{
+    100%{
+        opacity: 1;
+    }
+}
+.radial-bars{
+    width: 100%;
+    display: flex;
+justify-content: space-evenly;
+flex-wrap: wrap;
+align-items: flex-start;
+}
+.radial-bars .radial-bar{
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.radial-bars .radial-bar svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 160px;
+    
+}
+.radial-bars .radial-bar .progress-bar{
+    stroke-width: 10;
+    stop-color: #000000;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+    
+}
+@keyframes animate-bar{
+    100%{
+        stroke-dashoffset: -1;
+    }
+    
+}
+
+#skillcolor{
+    stroke: green;
+}
+
+.path{
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    
+}
+.path-1{animation: animate-path1 2s 1s infinite linear forwards;}
+.path-2{animation: animate-path2 2s 1s linear infinite forwards;}
+.path-3{animation: animate-path3 2s 1s linear infinite forwards;}
+.path-4{animation: animate-path4 2s 1s linear infinite forwards;}
+@keyframes animate-path1{
+    100%{
+        stroke-dashoffset: 50;;
+    }
+}
+@keyframes animate-path2{
+    100%{
+        stroke-dashoffset: 175;;
+    }
+}
+@keyframes animate-path3{
+    100%{
+        stroke-dashoffset: 125;;
+    }
+}
+@keyframes animate-path4{
+    100%{
+        stroke-dashoffset: 75;;
+    }
+}
+.radial-bar .percentage{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+    
+}
+.radial-bar .text{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showtext 0.5s 1s linear forwards;
+    opacity: 0;
+    
+}
+
+
+@keyframes slideright{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slidetop{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidebottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideleft{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }}
+
+    
+    </style>
+    
+  </head>
+  <body>
+    <header class="header">
+      <a href="#Home" class="logo">🅰🅽🆄🅹 🆂🅷🅰🆁🅼🅰</a>
+      <nav class="navbar">
+        <a href="#About" style="--1: 1" class="action">Home</a>
+        <a href="" style="--1: 2">About</a>
+        <a href="" style="--1: 3">Skills</a>
+        
+        <a href="" style="--1: 5">Contact</a>
+      </nav>
+    </header>
+    <section class="home">
+      <div class="home-content">
+        <h3>Hello,it's me</h3>
+        <h1>Anuj sharma</h1>
+        <h3>And I'm a <span>DEVLOPER! 🗜 , CODER ⛓</span> <span class="text"></span></h3>
+        <p>
+          I'm a web Designer with extensive experience for over 1 years.
+          <br />expertise is to create and website design,frontend design ,and
+          many more...
+        </p>
+        <div class="home-scl">
+          <a target="_blank" href="https://www.instagram.com/pandit_anuj_sharma356/" style="--1: 6  "><i class="bx bxl-instagram">in</i></a>
+          <a target="_blank" href="https://www.facebook.com/anujsharma.anuj.102" style="--1: 7"><i class="bx bxl-facebook-circle">f</i></a>
+          <a target="_blank" href="https://x.com/PANDIT356" style="--1: 8"><i class="bx bxl-twitter">x</i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/anuj-sharma-5216a6275/?originalSubdomain=in" style="--1: 9"><i class="bx bxl-whatsapp">Lin</i></a>
+        </div>
+        <a href="" class="btn-box">More about me</a>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about-img">
+        <img src="about image 2.png" alt="anuj png" />
+      </div>
+      <div class="about-text">
+        <h2>About <span>Me</span></h2>
+        <h4>Full Stack Devloper!</h4>
+        <p>
+          I am a Skilled web designer with over 1 year of Experience in the
+          collge. my passion lies in creating Captivating website designs and
+          implementing them through frontend devlopment. I take pride in staying
+          up-to-date with current design trends and leveraging my creativity to
+          produce visually appealing and user friendly website Throughout my
+          career ,i have devloped a deep understanding of user experience (UX)
+          and user interface (UI) principles by putting my self in the shoes of
+          the end users,i strive to create intuitive and soamless browsing
+          experience. i belive that a well -designed website should not only
+          look visually appealing but also provide a smooth and enjoyable
+          interaction for visitors. when starting a new project, i thorought
+          research and analyze the target audience and the client's specific
+          requirements.this enables me to tailor my Designs to meet their
+          expectations and deliver a unique online presence that aligns with
+          their brand identity...
+        </p>
+        <a href="" class="btn-box">More About me</a>
+      </div>
+    </section>
+
+<section>
+    <div class="services" id="services" >
+        <div class="container" >
+            <h1 class="sub-title" >my <span>services</span></h1>
+            <div class="services-list" >
+                <div>
+                    <i class='bx bx-code-alt' style="color: #00eeff;" >🕸</i>
+                    <h2>UI/UX Design</h2>
+                    <p>Our UI/UX design services focus on creating user-friendly, aesthetically
+                         pleasing, and efficient interfaces that provide a seamless experience for
+                          users. Whether you're building a website, mobile app, or software platform,
+                           we ensure every element is carefully crafted for usability and visual appeal.</p>
+                           <a href="" class="read" >lern more</a>
+                </div>
+                <div>
+                    <i class='bx bx-code-alt' style="color: #00eeff;" >🧩</i>
+                    <h2>Bug Fixes & Debugging</h2>
+                   <p>Our team helps you identify and resolve bugs, ensuring your application runs smoothly. We tackle problems ranging from simple syntax errors to complex logic issues, keeping your code error-free.</p>     
+                   <a href="" class="read" >lern more</a>
+                </div>
+                <div>
+                    <i class='bx bx-code-alt' style="color: #00eeff;" >🖥️</i>
+                    <h2>Security & Patching</h2>
+                   <p>
+                    Keeping your system secure is essential in today’s digital world. We provide security assessments, patch management, and firewall configurations to guard against malware, ransomware, and unauthorized access. We also ensure your OS is up to date with the latest security patches.
+                   </p>        <a href="" class="read" >lern more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--technical skills kea liy code -->
+
+<h1 class="sub-title" >My <span>Skills</span></h1>
+<section>
+  <div class="container1" id="Skills" >
+    <h1 class="heading1" >Technical Skills</h1>
+   <!--yha sea code lgeaga skills kea technical-->>
+ 
+   <div class="radial-bars" >
+    <svg x="0px" y="0px" viewbox="0 0 100 100"  >
+      <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+      <circle class="path path-1" id="skillcolor" cx="100" cy="100" r="80" ></circle>
+    </svg>
+    <div class="percentage" >90%</div>
+    <div class="text" >HTML</div>
+  </div>
+
+<!--skills 2-->
+<div class="radial-bars" >
+  <svg x="0px" y="0px" viewbox="0 0 100 100"  >
+    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+    <circle class="path path-1" id="skillcolor" cx="100" cy="100" r="80" ></circle>
+  </svg>
+  <div class="percentage" >70%</div>
+  <div class="text" >CSS</div>
+</div>
+<!--skills 3-->
+<div class="radial-bars" >
+  <svg x="0px" y="0px" viewbox="0 0 100 100"  >
+    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+    <circle class="path path-1" id="skillcolor" cx="100" cy="100" r="80" ></circle>
+  </svg>
+  <div class="percentage" >80%</div>
+  <div class="text" >NODE JS</div>
+</div>
+<!--skills 4-->
+<div class="radial-bars"  >
+  <svg x="0px" y="0px"  viewbox="0 0 100 100"  >
+    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+    <circle class="path path-1" id="skillcolor"  cx="100" cy="100" r="80" ></circle>
+  </svg>
+  <div class="percentage" >90%</div>
+  <div class="text" >C++</div>
+</div>
+
+
+<!--skills finish-->
+
+    </div>
+
+  </div>
+
+<div class="container" >
+  <h1 class="heading1" >Professional Skills</h1>
+  <div class="radial-bars" >
+    <svg x="0px" y="0px" viewbox="0 0 200 200"  >
+      <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+      <circle class="path path-1" cx="100" cy="100" r="80" ></circle>
+    </svg>
+    <div class="percentage" >90%</div>
+    <div class="text" >creativity</div>
+  </div>
+
+<!--skills 2-->
+<div class="radial-bars" >
+  <svg x="0px" y="0px" viewbox="0 0 200 200"  >
+    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+    <circle class="path path-1" cx="100" cy="100" r="80" ></circle>
+  </svg>
+  <div class="percentage" >65%</div>
+  <div class="text" >communication</div>
+</div>
+<!--skills 3-->
+<div class="radial-bars" >
+  <svg x="0px" y="0px" viewbox="0 0 200 200"  >
+    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+    <circle class="path path-1" cx="100" cy="100" r="80" ></circle>
+  </svg>
+  <div class="percentage" >80%</div>
+  <div class="text" >Leadership</div>
+</div>
+<!--skills 4-->
+<div class="radial-bars" >
+  <svg x="0px" y="0px" viewbox="0 0 200 200"  >
+    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+    <circle class="path path-1" cx="100" cy="100" r="80" ></circle>
+  </svg>
+  <div class="percentage" >70%</div>
+  <div class="text" >Teamwork</div>
+</div>
+<!--skills 5-->
+<div class="radial-bars" >
+  <svg x="0px" y="0px" viewbox="0 0 200 200"  >
+    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+    <circle class="path path-1" cx="100" cy="100" r="80" ></circle>
+  </svg>
+  <div class="percentage" >70%</div>
+  <div class="text" >Teamwork</div>
+</div>
+<!--skills 6-->
+<div class="radial-bars" >
+  <svg x="0px" y="0px" viewbox="0 0 200 200"  >
+    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+    <circle class="path path-1" cx="100" cy="100" r="80" ></circle>
+  </svg>
+  <div class="percentage" >70%</div>
+  <div class="text" >Teamwork</div>
+</div>
+<!--skills 7-->
+<div class="radial-bars" >
+  <svg x="0px" y="0px" viewbox="0 0 200 200"  >
+    <circle class="progress-bar" cx="100" cy="100" r="80" ></circle>
+    <circle class="path path-1" cx="100" cy="100" r="80" ></circle>
+  </svg>
+  <div class="percentage" >70%</div>
+  <div class="text" >Teamwork</div>
+</div>
+
+
+</div>
+
+
+</section>
+<br>
+<h1 class="sub-title" style="padding-top: 50px;" ><span>Contact</span> Me</h1>
+
+
+    
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="style.css">
+    <style>* {
+        box-sizing: border-box;
+    }
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #051129;
+        
+    }
+    
+    .contact-container {
+        width: 50%;
+        margin: 0 auto;
+        background-color:  wheat;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+    }
+    
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    label {
+        font-weight: bold;
+        color: #333;
+    }
+    
+    input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 15px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    
+    textarea {
+        height: 150px;
+    }
+    
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    
+    #successMessage {
+        color: green;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        
+        <p style="color: #555; text-align: center; " >If you have any questions or just want to get in touch, please feel free to contact me using the form below.</p>
+
+        <form id="contactForm">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something.." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p id="successMessage" style="display:none;">Thank you! Your message has been sent.</p>
+    </div>
+
+    <script src="script.js">
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    // Simple validation (could be improved)
+    if (name && email && message) {
+        // Here you would typically send the form data to a server
+        // For now, we'll just display a success message
+
+        document.getElementById('contactForm').reset();
+        document.getElementById('successMessage').style.display = 'block';
+    } else {
+        alert("Please fill in all fields.");
+    }
+});
+
+    </script>
+</body>
+</html>
+
